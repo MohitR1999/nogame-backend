@@ -1,0 +1,25 @@
+{
+  "name": "nogame-backend",
+  "version": "1.0.0",
+  "description": "Backend for a game, called as nogame",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "game",
+    "javascript",
+    "web",
+    "websockets",
+    "socket.io",
+    "node.js"
+  ],
+  "author": "Mohit Ranjan",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "socket.io": "^4.5.2"
+  }
+}
