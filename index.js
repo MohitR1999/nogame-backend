@@ -8,7 +8,7 @@ require('dotenv').config({ path : `.env.${process.env.NODE_ENV}` });
 const { Server } = require('socket.io');
 const io = new Server(server, {
     cors: {
-        origin : 'http://localhost:3000',
+        origin : `${process.env.CLIENT_URL}:${process.env.CLIENT_PORT}`,
         methods: ['GET', 'POST']
     }
 });
@@ -35,6 +35,5 @@ io.on('connection', (socket) => {
 })
 
 server.listen(PORT, () => {
-    console.log(`.env.${process.env.NODE_ENV}`);
     console.log(`Listening on port: ${PORT}`);
 })
