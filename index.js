@@ -8,7 +8,7 @@ require('dotenv').config({ path : `.env.${process.env.NODE_ENV}` });
 const { Server } = require('socket.io');
 const io = new Server(server, {
     cors: {
-        origin : `${process.env.CLIENT_URL}:${process.env.CLIENT_PORT}`,
+        origin : `*`,
         methods: ['GET', 'POST']
     }
 });
